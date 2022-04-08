@@ -1,10 +1,19 @@
 
+body {
+  color:#282c34;
+}
+
 #main-container {
   margin:auto;
   padding:20px;
 
 }
 
+h1 {
+  font-family: 'Black Han Sans';
+  font-size:30px;
+  color:rgb(7, 7, 214);
+}
 
 header {
   color:#282c34;
@@ -17,8 +26,35 @@ header {
   margin:20px 0;
 }
 
+#buttons button .highlighted {
+  background-color: rgb(236, 25, 25);
+};
+
+/* WebKit, Edge */
+::-webkit-input-placeholder {
+  color: deeppink;
+}
+/* Firefox 4-18 */
+:-moz-placeholder {
+  color: deeppink;
+  opacity: 1;
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: deeppink;
+  opacity: 1;
+}
+/* IE 10-11 */
+:-ms-input-placeholder {
+  color: deeppink;
+}
+/* Edge */
+::-ms-input-placeholder {
+  color: deeppink;
+}
+/* MODERN BROWSER */
 ::placeholder {
-  color: white;
+  color:white;
 }
 
 #buttons input {
@@ -81,5 +117,14 @@ tbody tr:nth-child(even) {
   background-color: rgb(92, 87, 223);
   font-weight: bold;
   color:white;
+}
 
+.green {
+  background-color: green;
+  color:white;
+}
+
+.red {
+  background-color: red;
+  color:white;
 }

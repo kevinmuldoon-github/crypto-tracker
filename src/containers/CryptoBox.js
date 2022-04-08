@@ -26,7 +26,6 @@ const CryptoBox = () => {
     };
 
     const searchCryptos = (searchTerm) => {
-
         setSearchTerm(searchTerm);
     };
 

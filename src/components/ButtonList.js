@@ -12,7 +12,7 @@ const handleSearch = (event) => {
 
     return (
         <div id="buttons">
-            <button onClick={handleClick} value="100">View All Cryptocurrencies</button>
+            <button onClick={handleClick} value="100" className="highlighted">View All Cryptocurrencies</button>
             <button onClick={handleClick} value="10">Top 10</button>
             <button onClick={handleClick} value="20">Top 20</button>
             <button onClick={handleClick} value="50">Top 50</button>

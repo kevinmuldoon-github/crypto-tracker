@@ -3,6 +3,7 @@ import React from "react";
 const CryptoListInfo = ({crypto}) => {
 
     let maxSupply;
+    let positiveChange;
     if (crypto.maxSupply != null) {
         maxSupply = parseInt(crypto.maxSupply).toLocaleString("en-US"); // Remove decimals from max supply
     } else {
@@ -19,6 +20,11 @@ const CryptoListInfo = ({crypto}) => {
     const changePercent = parseFloat(crypto.changePercent24Hr).toFixed(2);
     const averagePrice = parseInt(crypto.vwap24Hr).toLocaleString("en-US"); // Remove decimals from 24 hour average price
 
+    if (changePercent>= 0) {
+        positiveChange = true;
+    } else {
+        positiveChange = false;
+    }
 
     return (
         <>
@@ -31,7 +37,7 @@ const CryptoListInfo = ({crypto}) => {
             <td>${marketCap}</td>
             <td>${dailyVolume}</td>
             <td>${cryptoPrice}</td>
-            <td>{changePercent}%</td>
+            {positiveChange ? <td className="green">{changePercent}%</td>: <td className="red">{changePercent}%</td>}
             <td>${averagePrice}</td>
             <td><a href={crypto.explorer} target="_blank">Visit</a></td>
         </tr>
