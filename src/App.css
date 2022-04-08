@@ -17,7 +17,15 @@ header {
   margin:20px 0;
 }
 
-#buttons button {
+::placeholder {
+  color: white;
+}
+
+#buttons input {
+  width:300px;
+}
+
+#buttons button, #buttons input {
   margin-right:20px;
   padding:10px;
   font-size: 20px;
@@ -25,7 +33,7 @@ header {
   color:white;
 }
 
-#buttons button:hover {
+#buttons button:hover, #buttons input:hover {
   background-color: rgb(39, 35, 154);
 }
 

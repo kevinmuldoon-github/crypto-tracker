@@ -6,6 +6,7 @@ const CryptoBox = () => {
 
     // Define useState arrays
     const [cryptos, setCryptos] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     // Create useEffect for using API
     useEffect ( ()  => {
@@ -24,11 +25,16 @@ const CryptoBox = () => {
             getCryptos(numItems);
     };
 
+    const searchCryptos = (searchTerm) => {
+
+        setSearchTerm(searchTerm);
+    };
+
     return (
 
         <>
-        <ButtonList numberOfItems = {numberOfItems} />
-        <CryptoList cryptos = {cryptos} />
+        <ButtonList numberOfItems = {numberOfItems} searchCryptos = {searchCryptos} />
+        <CryptoList cryptos = {cryptos} searchTerm={searchTerm}/>
         </>
     );
 
