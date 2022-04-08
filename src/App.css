@@ -5,10 +5,31 @@
 
 }
 
+
 header {
   color:#282c34;
   font-size: large;
 }
+
+/* Button Styling */
+
+#buttons{
+  margin:20px 0;
+}
+
+#buttons button {
+  margin-right:20px;
+  padding:10px;
+  font-size: 20px;
+  background-color: rgb(92, 87, 223);
+  color:white;
+}
+
+#buttons button:hover {
+  background-color: rgb(39, 35, 154);
+}
+
+/* Table Styling */
 
 table {
 	border-collapse: collapse;

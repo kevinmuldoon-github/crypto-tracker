@@ -21,8 +21,8 @@ const CryptoList = ({cryptos}) => {
             <th>Ticker</th>
             <th>Supply</th>
             <th>Max Supply</th>
-            <th>Marketcap (USD)</th>
-            <th>24 Hour Volume (USD)</th>
+            <th>Marketcap</th>
+            <th>24 Hour Volume</th>
             <th>Current Price</th>
             <th>% Change (24 Hours)</th>
             <th>Average Price (24 Hours)</th>

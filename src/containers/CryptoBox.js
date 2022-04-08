@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ButtonList from "../components/ButtonList";
 import CryptoList from "../components/CryptoList";
 
 const CryptoBox = () => {
@@ -12,17 +13,22 @@ const CryptoBox = () => {
     }, []);
 
     // Fetch crypto information using API URL
-    const getCryptos = function () {
+    const getCryptos = function (items=100) { // Fetch 100 items by default
         fetch ('https://api.coincap.io/v2/assets')
             .then (response => response.json())
-            .then (result => setCryptos (result.data));
+            .then (result => setCryptos (result.data.slice(0,items)));
     };
 
+    // Function to change the number of cryptocurrencies displayed
+    const numberOfItems = (numItems) => {
+            getCryptos(numItems);
+    };
 
     return (
 
         <>
-        <CryptoList cryptos = {cryptos}/>
+        <ButtonList numberOfItems = {numberOfItems} />
+        <CryptoList cryptos = {cryptos} />
         </>
     );
 
