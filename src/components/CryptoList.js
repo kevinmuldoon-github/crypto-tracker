@@ -1,9 +1,18 @@
 import React from "react";
 import CryptoListInfo from "./CryptoListInfo";
 
-const CryptoList = ({cryptos}) => {
+const CryptoList = ({cryptos, searchTerm}) => {
 
-    const cryptoItems = cryptos.map ( (crypto, index) => {
+    let results=[];
+
+    if (searchTerm != '') {
+        results = cryptos.filter(crypto => 
+            (crypto.name.toLowerCase()).includes(searchTerm.toLowerCase()) )
+    } else {
+        results = cryptos;
+    }
+
+    const cryptoItems = results.map ( (crypto, index) => {
 
         return <CryptoListInfo crypto = {crypto} key = {index} />
 
