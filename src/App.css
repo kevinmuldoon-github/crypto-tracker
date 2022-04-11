@@ -20,6 +20,29 @@ header {
   font-size: large;
 }
 
+/* News Styling */
+#article-box {
+  width:90%;
+  border: 3px solid black;
+  padding:20px;
+  display: flex;
+  margin:15px auto;
+  background-color: #d7e1f5;
+  }
+
+.article-item {
+margin:10px;
+}
+
+.image-description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+
+}
+
+
+
 /* Button Styling */
 
 #buttons{
@@ -99,7 +122,7 @@ th, td {
 }
 
 th:hover, td:hover {
-	background-color: aqua;
+	background-color: rgb(28, 157, 243);
   color:black;
 }
 
